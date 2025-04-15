@@ -1,5 +1,3 @@
-import csv
-import numpy as np
 import keras
 from model import Malconv
 import sys
@@ -21,5 +19,5 @@ model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"]
 dataset = MalwareDataset(input) 
        
 
-model.fit(dataset,batch_size=batch_size, epochs=epochs, validation_split=0.1)
+model.fit(dataset,batch_size=batch_size, epochs=epochs)
 model.save("malconv.keras")
